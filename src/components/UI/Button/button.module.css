@@ -1,0 +1,14 @@
+.clBtn {
+  width: 60px;
+  background-color: #32addf;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  width: 85px;
+  height: 20px;
+}
+
+.clBtn:hover {
+  cursor: pointer;
+  background-color: #18224b
+}

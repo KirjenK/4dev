@@ -34,9 +34,19 @@
   height: 20px;
 }
 
+.wrapper button:hover {
+  cursor: pointer;
+  /* color: #32addf; */
+  background-color: #18224b
+}
+
 .wrapper input {
   outline-color: #32addf;
   width: 15rem;
   margin-top: 8px;
   /* text-align:center; */
+}
+
+#successMsg {
+  display: none;
 }
