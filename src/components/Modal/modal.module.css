@@ -1,0 +1,28 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal:hover {
+  cursor: pointer;
+}
+
+.modalContent:hover {
+  cursor:auto
+}
+
+
+.modalContent {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  height: 500px;
+  width: 350px;
+}

@@ -1,27 +1,42 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import tasksArr from './tasksArr';
 import styles from './tasksList.module.css';
+import { tasksUpload } from '../../store/actions/tasksActions';
+import Modal from '../Modal/Modal';
 
 export default function Tasks() {
-  const [tasks, setTasks] = useState([]);
   const [isLoad, setIsLoad] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
+  const [taskId, setTaskId] = useState('');
 
+  const tasks = useSelector((store) => store.tasksStore);
+
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
   // Эмитируем запрос на сервер
   useEffect(() => {
     const fetchData = async () => {
       await new Promise((res, rej) => {
         setTimeout(() => {
           res();
-        }, 1500);
+        }, 500);
       });
-      setTasks(tasksArr);
+      dispatch(tasksUpload(tasksArr));
       setIsLoad(false);
     };
 
     fetchData();
   }, []);
 
-  console.log('tasks', tasks);
+  const handleClick = (item) => {
+    console.log('item', item);
+    setModalActive(true);
+    setTaskId(item.id);
+    navigate(`/tasks/${item.id}`);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -29,8 +44,8 @@ export default function Tasks() {
         <h3>Загрузка данных..</h3>
       ) : (
         <div className={styles.taskContainer}>
-          {tasks.sort((a, b) => b.priority - a.priority).map((task) => (
-            <div key={task.id} className={styles.taskWrapper}>
+          {tasks.map((task) => (
+            <div onClick={() => handleClick(task)} key={task.id} className={styles.taskWrapper}>
               <div className={styles.cirleAndTitleWrapper}>
                 {task.priority === 2
                   && <div className={styles.circle2} />}
@@ -45,6 +60,13 @@ export default function Tasks() {
             </div>
           ))}
         </div>
+      )}
+      {modalActive && (
+        <Modal
+          taskId={taskId}
+          active={modalActive}
+          setActive={setModalActive}
+        />
       )}
     </div>
   );

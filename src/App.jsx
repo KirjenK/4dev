@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
@@ -23,12 +24,12 @@ function App() {
 
         <Route element={<PrivateRoute authKey={authKey} />}>
           <Route path="/tasks" element={<TasksList />} />
+          <Route path="/tasks/:id" element={<TasksList />} />
         </Route>
-
         <Route path="/error" element={<ErrorPage />} />
         <Route path="/info" element={<Info />} />
-
       </Routes>
+
     </div>
   );
 }

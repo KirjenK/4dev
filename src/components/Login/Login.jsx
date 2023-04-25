@@ -27,6 +27,7 @@ export default function Login({ setAuthKey }) {
       localStorage.setItem('authKey', key);
 
       btn.style = 'display: none';
+      p.style = 'display: block';
       p.textContent = 'Успешный вход';
 
       setTimeout(() => {
