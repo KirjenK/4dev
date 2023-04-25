@@ -1,0 +1,42 @@
+.wrapper {
+  margin-top: 1rem;
+  border: 1px solid gray;
+  width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper>h2 {
+  color: #18224b;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper>form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper button {
+  width: 60px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  background-color: #32addf;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  width: 85px;
+  height: 20px;
+}
+
+.wrapper input {
+  outline-color: #32addf;
+  width: 15rem;
+  margin-top: 8px;
+  /* text-align:center; */
+}

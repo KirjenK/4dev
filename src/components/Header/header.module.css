@@ -1,0 +1,28 @@
+.wrapper {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70rem;
+  border: 1px solid gray;
+  font-size: 25px;
+}
+
+.rightBox {
+  display: flex;
+  align-items: center;
+}
+
+.rightBox>div {
+  margin-right: 0.5rem;
+  color: #18224b;
+}
+
+.rightBox img:hover {
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #7ccff0;
+}
