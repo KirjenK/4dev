@@ -1,3 +1,40 @@
-.wrapper {
+.wrapper>h3 {
   text-align: center;
+  margin-top: 0;
+}
+
+.select {
+  width: 12rem;
+  margin-left: 0.5rem;
+  outline-color: black;
+  border-radius: 5px;
+}
+
+.selectWrapper {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.btnWrapper {
+  margin-top: 10px;
+}
+
+.btnWrapper>button {
+  margin-left: 10px;
+}
+
+.btnDelete {
+  background-color: #ff2b20;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  width: 5rem;
+  height: 1.5rem;
+}
+
+
+.btnDelete:hover {
+  cursor: pointer;
+  color: #ff2b20;
+  background-color: white
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../UI/Button/Button';
 
 export default function Info() {
   return (
@@ -10,7 +12,12 @@ export default function Info() {
       textAlign: 'center',
     }}
     >
-      Чтобы войти под другим логином нужно выйти
+      <div style={{
+        marginBottom: '0.2rem',
+      }}
+      > Чтобы войти под другим логином нужно выйти из профиля
+      </div>
+      <Link to="/tasks"> <Button text="Назад" /></Link>
     </div>
   );
 }

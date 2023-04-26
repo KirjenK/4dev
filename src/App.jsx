@@ -17,7 +17,6 @@ function App() {
     <div className="App">
       <Header authKey={authKey} setAuthKey={setAuthKey} />
       <Routes>
-
         <Route element={<AuthPrivate authKey={authKey} />}>
           <Route path="/" element={<Login setAuthKey={setAuthKey} />} />
         </Route>
@@ -25,11 +24,11 @@ function App() {
         <Route element={<PrivateRoute authKey={authKey} />}>
           <Route path="/tasks" element={<TasksList />} />
           <Route path="/tasks/:id" element={<TasksList />} />
+          <Route path="/info" element={<Info />} />
         </Route>
-        <Route path="/error" element={<ErrorPage />} />
-        <Route path="/info" element={<Info />} />
-      </Routes>
 
+        <Route path="/error" element={<ErrorPage />} />
+      </Routes>
     </div>
   );
 }

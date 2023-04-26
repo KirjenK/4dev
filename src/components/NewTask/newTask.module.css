@@ -1,0 +1,56 @@
+.wrapper h3 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnCancel {
+  background-color: #ff2b20;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  width: 5rem;
+  height: 1.5rem;
+}
+
+.btnCancel:hover {
+  cursor: pointer;
+  color: #ff2b20;
+  background-color: white
+}
+
+.form>div {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.formEl {
+  width: 100%;
+  margin-left: 5px;
+  outline-color: black;
+}
+
+.textarea {
+  margin-bottom: 10px;
+  outline-color: black;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.form>div:nth-last-child(2) {
+  justify-content: center;
+}
+
+.form>div:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.form>div>button {
+  margin-left: 5px;
+}

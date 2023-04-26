@@ -1,11 +1,10 @@
 .clBtn {
-  width: 60px;
   background-color: #32addf;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
   border: none;
-  width: 85px;
-  height: 20px;
+  width: 5rem;
+  height: 1.5rem;
 }
 
 .clBtn:hover {

@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import styles from './modal.module.css';
 import Task from '../Task/Task';
+import NewTask from '../NewTask/NewTask';
 
 export default function Modal({
-  active, setActive, taskId,
+  active, setActive, taskId, isNewTask, setIsNewTask,
 }) {
   const navigate = useNavigate();
   const featureAnimation = {
@@ -20,6 +20,7 @@ export default function Modal({
   };
 
   const handleClick = () => {
+    setIsNewTask(false);
     setActive(false);
     navigate('/tasks');
   };
@@ -40,7 +41,11 @@ export default function Modal({
         className={styles.modalContent}
         onClick={(e) => e.stopPropagation()}
       >
-        <Task setActive={setActive} taskId={taskId} />
+        {isNewTask ? (
+          <NewTask setIsNewTask={setIsNewTask} setActive={setActive} />
+        ) : (
+          <Task setActive={setActive} taskId={taskId} />
+        )}
       </motion.div>
     </div>
   );

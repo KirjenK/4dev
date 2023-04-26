@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import * as type from '../actions/tasksActions';
 
 // eslint-disable-next-line default-param-last
@@ -8,6 +9,25 @@ export const tasksReducer = (state = [], action) => {
 
     case type.TASKS_FILTER:
       return state.filter((el) => el.id !== action.payload);
+
+    case type.CHANGE_STATUS:
+      return state.map((el) => {
+        if (el.id === action.payload.id) {
+          return { ...el, status: action.id };
+        }
+        return el;
+      });
+
+    case type.CHANGE_PRIORITY:
+      return state.map((el) => {
+        if (el.id === action.payload.id) {
+          return { ...el, priority: action.id };
+        }
+        return el;
+      });
+
+    case type.ADD_TASK:
+      return [...state, action.payload];
 
     default:
       return state;

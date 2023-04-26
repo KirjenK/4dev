@@ -20,8 +20,7 @@
 
 .taskContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 1rem;
 }
 
@@ -70,4 +69,41 @@
 .taskWrapper:hover {
   cursor: pointer;
   background-color: white;
+}
+
+.newTaskBox {
+  border-bottom: 1px solid gray;
+  padding: 0.5rem;
+  background-color: rgb(237, 247, 255);
+}
+
+.newTaskBox>button {
+  padding: 0.5rem;
+  background-color: rgb(237, 247, 255);;
+  border: 1px solid gray;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+
+.newTaskBox>button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.columnBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.columnBox>h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #18224b;
 }

@@ -17,7 +17,6 @@
 }
 
 .rightBox>div {
-  margin-right: 0.5rem;
   color: #18224b;
 }
 
@@ -25,4 +24,10 @@
   border-radius: 10px;
   cursor: pointer;
   background-color: #7ccff0;
+}
+
+.telega {
+  margin-right: 10px;
+  margin-left: 10px;
+
 }

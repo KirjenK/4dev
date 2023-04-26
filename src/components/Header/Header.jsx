@@ -20,7 +20,7 @@ export default function Header({ authKey, setAuthKey }) {
       <div className={styles.rightBox}>
         <div>Test by Kir</div>
         <a href="https://t.me/kirjen" target="blank">
-          <img src={telega} alt="" style={{ maxWidth: '40px', width: '40px' }} />
+          <img className={styles.telega} src={telega} alt="" style={{ maxWidth: '40px', width: '40px' }} />
         </a>
         {Boolean(authKey)
           && <Button text="Выйти" onClick={handleClick} />}
