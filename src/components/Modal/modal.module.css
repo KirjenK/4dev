@@ -25,3 +25,9 @@
   background-color: white;
   width: 350px;
 }
+
+@media (max-width: 450px) {
+  .modalContent {
+    width: 75vw;
+  }
+}

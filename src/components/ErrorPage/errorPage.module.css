@@ -10,3 +10,18 @@
 .wrapper>p {
   font-size: 17px;
 }
+
+@media (max-width: 810px) {
+  .wrapper  {
+    width: 65vw
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper h2  {
+    font-size: 20px;
+  }
+  .wrapper>p {
+    font-size: 15px;
+  }
+}

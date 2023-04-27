@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import styles from './task.module.css';
 import Button from '../UI/Button/Button';
-import { changeStatus, tasksFilter, changePriority } from '../../store/actions/tasksActions';
+import {
+  changeStatus, tasksFilter, changePriority, sortByPriority,
+} from '../../store/actions/tasksActions';
 
 export default function Task({ taskId, setActive }) {
   const tasks = useSelector((store) => store.tasksStore);
@@ -33,6 +35,7 @@ export default function Task({ taskId, setActive }) {
   const handleClickSave = () => {
     if (priority !== task.priority) {
       dispatch(changePriority(task, priority));
+      dispatch(sortByPriority());
     }
     if (status !== task.status) {
       dispatch(changeStatus(task, status));

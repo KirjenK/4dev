@@ -13,6 +13,7 @@
 
 .taskWrapper {
   border: 1px solid #137dca;
+  border-radius: 20px;
   margin: 0.5rem;
   max-width: 300px;
   width: 300px;
@@ -28,6 +29,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  
 }
 
 .taskWrapper>p {
@@ -37,6 +39,7 @@
 .cirleAndTitleWrapper {
   display: flex;
   align-items: center;
+  padding: 0.2rem;
 }
 
 .circle2 {
@@ -95,7 +98,7 @@
 .columnBox {
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
+  border: 0.5px solid gray;
   border-radius: 10px;
   padding: 0.5rem;
 }
@@ -106,4 +109,72 @@
   margin-bottom: 10px;
   font-style: italic;
   color: #18224b;
+}
+
+@media (max-width: 1500px) {
+  .wrapper  {
+    width: 90vw
+  }
+  @media (max-width: 1300px) {
+    .taskWrapper {
+      width: 20vw;
+    }
+  }
+  @media (max-width: 1300px) {
+    .cirleAndTitleWrapper>h3 {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .columnBox {
+      flex-direction: row;
+      justify-content: center;
+      margin: 0.5rem;
+    }
+    .columnBox>h2 {
+      font-size: 18px;
+      margin-left: 1px;
+      width: 10px;
+      text-align: left;
+      writing-mode:vertical-lr
+    }
+    .taskWrapper {
+      max-width: 20rem;
+    }
+
+    .taskWrapper {
+      width: 7.5rem;
+    }
+   
+    .taskContainer {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      overflow-x: scroll;
+    }
+    .taskWrapper>p {
+      font-size: 13px;
+    }
+    .newTaskBox>button {
+      font-size: 15px;
+    }
+    .circle2 {
+      margin-top: 5px;
+      margin-left: 0;
+    }
+    .circle1 {
+      margin-top: 5px;
+      margin-left: 0;
+    }
+    .circle0 {
+      margin-top: 5px;
+      margin-left: 0;
+    }
+    .cirleAndTitleWrapper {
+      flex-direction: column;
+    }
+    .cirleAndTitleWrapper>h3 {
+      margin-bottom: 5px;
+    }
+  }
 }

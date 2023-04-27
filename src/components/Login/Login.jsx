@@ -51,7 +51,7 @@ export default function Login({ setAuthKey }) {
         <input type="text" value={login} onChange={handleLogin} placeholder="Логин" />
         <input type="password" value={password} onChange={handlePassword} placeholder="Пароль" />
         <button id="btnSumbitAuth" type="submit">Войти</button>
-        <p style={{ display: 'none' }} id="msgToUser" />
+        <p className={styles.msgToUser} id="msgToUser" style={{ display: 'none' }} />
       </form>
     </div>
   );

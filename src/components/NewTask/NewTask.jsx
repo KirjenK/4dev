@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import Button from '../UI/Button/Button';
 import styles from './newTask.module.css';
 import uniqueAuthors from './uniqueAuthors';
-import { addTask } from '../../store/actions/tasksActions';
+import { addTask, sortByPriority } from '../../store/actions/tasksActions';
 
 export default function NewTask({ setActive, setIsNewTask }) {
   const [authors, setAuthors] = useState(uniqueAuthors);
@@ -57,6 +57,7 @@ export default function NewTask({ setActive, setIsNewTask }) {
         author_name: author,
       };
       dispatch(addTask(newTask));
+      dispatch(sortByPriority());
       setActive(false);
       setIsNewTask(false);
     } else {

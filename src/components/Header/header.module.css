@@ -29,5 +29,40 @@
 .telega {
   margin-right: 10px;
   margin-left: 10px;
+}
 
+@media (max-width: 1170px) {
+  .wrapper {
+    width: 85vw
+  }
+}
+
+@media (max-width: 670px) {
+  .wrapper {
+    font-size: 18px;
+  }
+
+  .rightBox {
+    flex-direction: column;
+  }
+
+  .telega {
+    margin-right: 0;
+    margin-left: 0
+  }
+
+  .rightBox>div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    font-size: 13px;
+  }
+
+  .logo {
+    min-width: 200px !important;
+    width: 200px !important
+  }
 }

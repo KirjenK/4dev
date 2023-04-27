@@ -1,8 +1,8 @@
-/* eslint-disable no-param-reassign */
+/* eslint-disable no-case-declarations */
 import * as type from '../actions/tasksActions';
 
 // eslint-disable-next-line default-param-last
-export const tasksReducer = (state = [], action) => {
+export const tasksReducer = (state = { tasks: [] }, action) => {
   switch (action.type) {
     case type.TASKS_UPLOAD:
       return action.payload.sort((a, b) => b.priority - a.priority);
@@ -28,6 +28,10 @@ export const tasksReducer = (state = [], action) => {
 
     case type.ADD_TASK:
       return [...state, action.payload];
+
+    case type.SORT_BY_PRIORITY:
+      const sortedTasks = [...state].sort((a, b) => b.priority - a.priority);
+      return sortedTasks;
 
     default:
       return state;

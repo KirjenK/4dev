@@ -16,7 +16,7 @@ export default function Header({ authKey, setAuthKey }) {
 
   return (
     <header className={styles.wrapper}>
-      <img src={logo} alt="logo" style={{ maxWidth: '300px', width: '300px' }} />
+      <img className={styles.logo} src={logo} alt="logo" style={{ maxWidth: '300px', width: '300px' }} />
       <div className={styles.rightBox}>
         <div>Test by Kir</div>
         <a href="https://t.me/kirjen" target="blank">

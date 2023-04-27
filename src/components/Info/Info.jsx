@@ -8,7 +8,7 @@ export default function Info() {
       marginTop: '1rem',
       marginLeft: 'auto',
       marginRight: 'auto',
-      width: '300px',
+      width: '290px',
       textAlign: 'center',
     }}
     >
@@ -17,6 +17,7 @@ export default function Info() {
       }}
       > Чтобы войти под другим логином нужно выйти из профиля
       </div>
+      <hr />
       <Link to="/tasks"> <Button text="Назад" /></Link>
     </div>
   );
