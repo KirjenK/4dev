@@ -1,4 +1,3 @@
-// import { useNavigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import styles from './header.module.css';
 import logo from '../../img/photo.svg';
@@ -24,7 +23,6 @@ export default function Header({ authKey, setAuthKey }) {
         </a>
         {Boolean(authKey)
           && <Button text="Выйти" onClick={handleClick} />}
-
       </div>
     </header>
   );

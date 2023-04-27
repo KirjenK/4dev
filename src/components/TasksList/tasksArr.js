@@ -17,7 +17,7 @@ const tasksArr = [
     title: 'Implement user authentication',
     description: 'Add user authentication feature to the website',
     schedule: {
-      creation_time: '2021-07-24T14:30:00',
+      creation_time: '1',
     },
     author_name: 'Sarah Lee',
   },

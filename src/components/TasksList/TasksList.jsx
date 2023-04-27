@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +13,7 @@ export default function Tasks() {
   const [isNewTask, setIsNewTask] = useState(false);
 
   const tasks = useSelector((store) => store.tasksStore);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
